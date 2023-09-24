@@ -40,9 +40,38 @@ if countYes > countNo {
 
 //: - callout(Exercise): Test your code by calling the `for…in` loop on each of the vote collections.\
 //:Which measures won by popular vote?
+//For should Install coffee machine
+var CountYes = 0
+var CountNo = 0
+for Coffeevote in shouldInstallCoffeeVendingMachineVotes {
+    if Coffeevote == true {
+        CountYes += 1
+    } else {
+        CountNo += 1
+    }
+}
+
+// for if having more poll options
+var cOuntYes = 0
+var cOuntNo = 0
+for polloPtions in shouldHaveMorePollOptionsVotes {
+    if polloPtions == true {
+        cOuntYes += 1
+       
+    } else {
+        cOuntNo += 1
+    }
+}
 
 
-
+//which measure won by popular votes?
+if CountYes > cOuntYes {
+    print("Installing a coffee vending machine received more 'true' votes.")
+} else if CountNo > cOuntNo {
+    print("Having more poll options received more 'true' votes.")
+} else {
+    print("It's a tie. Both issues received the same number of 'true' votes.")
+}
 
 /*:
  ### Extension:
